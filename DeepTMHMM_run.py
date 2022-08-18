@@ -15,8 +15,8 @@ from contact_map import ContactFrequency
 import numpy as np
 
 deeptmhmm = biolib.load('DTU/DeepTMHMM')
-working_directory = r'/mnt/c/Users/Jonah/OneDrive/Documents/AlphaFold_Project/contact_map'
-df = pd.read_csv('results5.csv',header=0)
+working_directory = #local directory
+df = pd.read_csv('results.csv',header=0)
 print(df)
 os.chdir(working_directory)
 cutoff_dist = 2.0 #in nm
@@ -132,7 +132,7 @@ def main():
                         print(str(record.seq))
                         print(topology)
                         print('\n')
-                        with open('results5.csv','a') as fd:
+                        with open('results.csv','a') as fd:
                             wr = csv.writer(fd, dialect='excel')
                             wr.writerow(to_append)
         except AttributeError:
